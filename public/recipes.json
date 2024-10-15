@@ -2,7 +2,7 @@
     {
         "id": "001",
         "recipe_name": "Grilled Chicken with Basil",
-        "image": "https://images.unsplash.com/photo-1614398751058-eb2e0bf63e53?q=80&w=2028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "https://images.unsplash.com/photo-1577194509876-4bb24787a641?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "short_description": "A flavorful grilled chicken dish with a fresh basil touch.",
         "ingredients": [
             "550 g chicken",
@@ -32,7 +32,7 @@
     {
         "id": "003",
         "recipe_name": "Vegetable Stir-Fry",
-        "image": "https://source.unsplash.com/MNtag_eXMKw/1024x1024",
+        "image": "https://plus.unsplash.com/premium_photo-1700673590095-d48038a0044e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "short_description": "A colorful mix of vegetables sautéed with soy sauce.",
         "ingredients": [
             "200 g broccoli",
