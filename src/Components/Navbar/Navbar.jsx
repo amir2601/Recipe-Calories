@@ -2,10 +2,10 @@
 
 const Navbar = () => {
     return (
-        <div className="flex justify-between items-center py-5">
+        <div className="flex justify-between items-center py-5 px-3 md:px-0">
             <p className="text-2xl font-bold">Recipe Calories</p>
 
-            <ul className="flex gap-5 cursor-pointer">
+            <ul className="hidden md:flex gap-5 cursor-pointer">
                 <li>Home</li>
                 <li>Recipes</li>
                 <li>About</li>
@@ -13,8 +13,8 @@ const Navbar = () => {
             </ul>
 
             <div className="flex items-center gap-4">
-                <div>
-                    <input className="border rounded-full p-3" type="search" name="" id="" placeholder="Search"/>
+                <div className="hidden md:block">
+                    <input className="border rounded-full p-3" type="search" name="" id="" placeholder="Search" />
                 </div>
 
                 <div className="avatar">
