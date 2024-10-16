@@ -22,7 +22,7 @@ const OurRecipes = () => {
         if (!isExist) {
             setWantToCooks([...wantToCooks, recipe]);
         } else {
-            toast.error('EIta ase re vai');
+            toast.error('Already have');
         };
     };
 

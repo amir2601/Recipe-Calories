@@ -26,7 +26,7 @@ const WantToCook = ({ wantToCooks, totalTime, totalCalories, currentlyCooking, h
                                         <tr key={idx}>
                                             <th>{idx + 1}</th>
                                             <td>{wantToCook.recipe_name}</td>
-                                            <td>{wantToCook.preparing_time} </td>
+                                            <td>{wantToCook.preparing_time} min </td>
                                             <td>{wantToCook.calories}</td>
                                             <td
                                                 onClick={() => handleCurrentlyCooking(wantToCook)}
@@ -71,7 +71,7 @@ const WantToCook = ({ wantToCooks, totalTime, totalCalories, currentlyCooking, h
                         </table>
 
                         <div className="flex justify-between mt-6 bg-slate-100 py-4 px-3 rounded-lg">
-                            <p className="font-semibold">Total Time: {totalTime}</p>
+                            <p className="font-semibold">Total Time: {totalTime} min</p>
                             <p className="font-semibold">Total Calories: {totalCalories}</p>
                         </div>
                     </div>
