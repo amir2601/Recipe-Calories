@@ -19,7 +19,7 @@ const OurRecipes = () => {
                 <p>Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus vulputate netus pharetra rhoncus. <br /> Eget urna volutpat curabitur elementum mauris aenean neque. </p>
             </div>
 
-            <div className="flex gap-4 mt-10">
+            <div className="md:flex gap-4 mt-10">
                 <RecipeCards recipes={recipes}></RecipeCards>
                 <WantToCook></WantToCook>
             </div>
