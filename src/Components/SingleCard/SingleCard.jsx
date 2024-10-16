@@ -1,11 +1,8 @@
 import PropTypes from "prop-types";
 import { FaRegClock, FaFire } from "react-icons/fa";
 
-const SingleCard = ({recipe}) => {
+const SingleCard = ({recipe, handleWantToCook}) => {
     const {recipe_name, image, short_description, ingredients, preparing_time, calories} = recipe;
-
-    console.log(recipe.calories);
-    
 
     return (
         <div>
@@ -45,7 +42,7 @@ const SingleCard = ({recipe}) => {
                             <p>{calories}</p>
                         </div>
                     </div>
-                    <button className=" btn bg-green-400 rounded-xl py-2 px-5">Want to Cook</button>
+                    <button onClick={() => handleWantToCook(recipe)} className=" btn bg-green-400 rounded-xl py-2 px-5">Want to Cook</button>
                 </div>
             </div>
         </div>
@@ -56,4 +53,5 @@ export default SingleCard;
 
 SingleCard.propTypes = {
     recipe: PropTypes.object,
+    handleWantToCook: PropTypes.func,
 };

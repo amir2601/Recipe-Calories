@@ -5,12 +5,24 @@ import { useEffect } from "react";
 
 const OurRecipes = () => {
     const [recipes, setRecipes] = useState([]);
+    const [wantToCooks, setWantToCooks] = useState([]);
 
     useEffect(() => {
         fetch('recipes.json')
             .then(res => res.json())
             .then(data => setRecipes(data))
     }, []);
+
+    const handleWantToCook = (recipe) => {
+        const isExist = wantToCooks.find(wtc => wtc.id === recipe.id);
+        if (!isExist) {
+            setWantToCooks([...wantToCooks, recipe]);
+        } else {
+            alert('EIta ase re vai');
+        }
+
+        console.log(recipe);
+    };
 
     return (
         <div className="mt-14">
@@ -20,8 +32,13 @@ const OurRecipes = () => {
             </div>
 
             <div className="lg:flex gap-4 mt-10">
-                <RecipeCards recipes={recipes}></RecipeCards>
-                <WantToCook></WantToCook>
+                <RecipeCards
+                    recipes={recipes}
+                    handleWantToCook={handleWantToCook}
+                ></RecipeCards>
+                <WantToCook
+                    wantToCooks={wantToCooks}
+                ></WantToCook>
             </div>
         </div>
     );
