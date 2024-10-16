@@ -35,11 +35,11 @@ const SingleCard = ({recipe, handleWantToCook}) => {
                     <div className="flex gap-6">
                         <div className="flex items-center gap-2">
                             <FaRegClock />
-                            <p>{preparing_time}</p>
+                            <p>{preparing_time} minutes</p>
                         </div>
                         <div className="flex items-center gap-2">
                             <FaFire />
-                            <p>{calories}</p>
+                            <p>{calories} calories</p>
                         </div>
                     </div>
                     <button onClick={() => handleWantToCook(recipe)} className=" btn bg-green-400 rounded-xl py-2 px-5">Want to Cook</button>

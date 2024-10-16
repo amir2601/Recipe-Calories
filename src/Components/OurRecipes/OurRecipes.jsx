@@ -2,10 +2,14 @@ import { useState } from "react";
 import RecipeCards from "../RecipeCards/RecipeCards";
 import WantToCook from "../WantToCook/WantToCook";
 import { useEffect } from "react";
+import { toast } from 'react-toastify';
 
 const OurRecipes = () => {
     const [recipes, setRecipes] = useState([]);
     const [wantToCooks, setWantToCooks] = useState([]);
+    const [currentlyCooking, setCurrentlyCooking] = useState([]);
+    const [totalTime, setTotalTime] = useState(0);
+    const [totalCalories, setTotalCalories] = useState(0);
 
     useEffect(() => {
         fetch('recipes.json')
@@ -18,10 +22,20 @@ const OurRecipes = () => {
         if (!isExist) {
             setWantToCooks([...wantToCooks, recipe]);
         } else {
-            alert('EIta ase re vai');
-        }
+            toast.error('EIta ase re vai');
+        };
+    };
 
-        console.log(recipe);
+    const handleCurrentlyCooking = (cook) => {
+        setCurrentlyCooking([...currentlyCooking, cook]);
+
+        // Update total time and calories
+        setTotalTime(totalTime + cook.preparing_time);
+        setTotalCalories(totalCalories + cook.calories);
+
+        // Remove from want to cook list
+        const remaining = wantToCooks.filter(wtc => wtc.id !== cook.id);
+        setWantToCooks(remaining);
     };
 
     return (
@@ -38,6 +52,10 @@ const OurRecipes = () => {
                 ></RecipeCards>
                 <WantToCook
                     wantToCooks={wantToCooks}
+                    totalCalories={totalCalories}
+                    totalTime={totalTime}
+                    currentlyCooking={currentlyCooking}
+                    handleCurrentlyCooking={handleCurrentlyCooking}
                 ></WantToCook>
             </div>
         </div>
